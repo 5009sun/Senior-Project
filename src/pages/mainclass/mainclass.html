@@ -1,0 +1,97 @@
+<!--
+  Generated template for the MainclassPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>mainclass</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div color="light">
+        <ion-segment [(ngModel)]="teacherClass">
+          <ion-segment-button value="main">
+            Main
+          </ion-segment-button>
+          <ion-segment-button value="member">
+            Member
+          </ion-segment-button>
+          <ion-segment-button value="about">
+              About
+            </ion-segment-button>
+
+        </ion-segment>
+      </div>
+      <div class="text-center">
+      <!-- <ion-navbar color="backk" text-right>
+          <span class="text-center"> 1-5 of 20  </span>
+          <span class="pull-rigth">
+          <img src="assets/imgs/41651845_243174696395429_3103131515085651968_n.png">
+        </span>
+          <span class="pull-rigth">
+              <img src="assets/imgs/ery.png">
+            </span>
+        </ion-navbar> -->
+      </div>
+
+      <div [ngSwitch]="teacherClass">
+        <ion-list *ngSwitchCase="'main'">
+            <img src="assets/imgs/Example003.png" (click)="preview()">
+          <ion-item>
+              <ion-navbar color="light" >
+                  <span class="pull-left"><img src="assets/imgs/plus.png" (click)="chooseForm()"></span>
+                  <span class="big-letter">Add Form</span>
+                  
+                </ion-navbar>
+
+          </ion-item>
+          ...
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'member'">
+            <ion-item>
+                <ion-navbar color="light" >
+                    <span class="pull-left"><img src="assets/imgs/plus.png"></span>
+                    <span padding class="big-letter">Add Member</span>
+                  </ion-navbar>
+
+            </ion-item>
+            <ion-item>
+                <ion-navbar color="light" >
+                    <span class="pull-left">นางสาวมีนา  ยินดี  </span>
+                    <!-- <span class="pull-right"> 17/8/2661  </span> -->
+                  </ion-navbar>
+            </ion-item><ion-item>
+                <ion-navbar color="light" >
+                    <span class="pull-left">นางสาวเมษา  ยินดี  </span>
+                    <!-- <span class="pull-right"> 17/8/2661  </span> -->
+                  </ion-navbar>
+            </ion-item><ion-item>
+                <ion-navbar color="light" >
+                    <span class="pull-left">นางสาวพฤษภา  ยินดี  </span>
+                    <!-- <span class="pull-right"> 17/8/2661  </span> -->
+                  </ion-navbar>
+            </ion-item>
+
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'about'">
+            <ion-item>
+                <ion-label fixed>Description</ion-label>
+                <ion-input type="text" value="Medical skills"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label fixed>Class code</ion-label>
+                <ion-input type="text" value="XD55555XD"></ion-input>
+              </ion-item>
+          </ion-list>
+
+      </div>
+</ion-content>
